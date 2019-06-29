@@ -12,4 +12,3 @@ function getSiblings (element) {
   }
   return res
 }
-console.log('getSiblings(item3)', getSiblings(item2))

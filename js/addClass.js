@@ -9,8 +9,6 @@ function addClass (element, classes) {
     }
   }
 }
-addClass(item3, { 'a': true, 'b': false, 'c': true })
-
 
 // 优化
 function addClass (element, classes) {
@@ -20,4 +18,3 @@ function addClass (element, classes) {
     element.classList[methodsName](key)
   }
 }
-addClass(item3, { 'a': true, 'b': false, 'c': true })
