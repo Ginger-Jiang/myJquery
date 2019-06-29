@@ -10,11 +10,20 @@ function addClass (element, classes) {
   }
 }
 
-// 优化
-function addClass (element, classes) {
+// 代码优化
+function addClass (ele, classes) {
   for (const key in classes) {
     let value = classes[key]
     let methodsName = value ? 'add' : 'remove'
-    element.classList[methodsName](key)
+    ele.classList[methodsName](key)
+  }
+}
+
+
+// 第二版
+Node.prototype.addClass = function (classes) {
+  for (let key in classes) {
+    let methodsName = classes[key] ? 'add' : 'remove'
+    this.classList[methodsName](key)
   }
 }
