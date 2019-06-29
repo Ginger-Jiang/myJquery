@@ -27,3 +27,16 @@ Node.prototype.addClass = function (classes) {
     this.classList[methodsName](key)
   }
 }
+
+
+// 第三版
+window.Node3 = function (ele) {
+  return {
+    addClass (classes) {
+      for (const key in classes) {
+        let methodsName = classes[key] ? 'add' : 'remove'
+        ele.classList[methodsName](key)
+      }
+    }
+  }
+}
