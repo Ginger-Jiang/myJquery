@@ -40,3 +40,18 @@ window.Node3 = function (ele) {
     }
   }
 }
+
+// 第四版
+window.Node3 = function (nodeOrSelect) {
+  let ele
+  if (typeof nodeOrSelect === 'string') {
+    ele = document.querySelector(nodeOrSelect)
+  } else {
+    ele = nodeOrSelect
+  }
+  return {
+    addClass (className) {
+      ele.classList.add(className)
+    }
+  }
+}

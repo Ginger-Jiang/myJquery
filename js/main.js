@@ -10,12 +10,17 @@ item3.getSiblings()
 // 第三版
 var node2 = Node2(item4)
 node2.getSiblings()
-
+// 第四版
+var node2 = Node2('#item4')
+console.log('4',node2.getSiblings())
 
 // 第一版
-myDom.addClass(item3, { 'a': true, 'b': false, 'c': true })
+// myDom.addClass(item3, { 'a': true, 'b': false, 'c': true })
 // 第二版
-item2.addClass({ 'a': true, 'b': false, 'c': true })
+// item2.addClass({ 'a': true, 'b': false, 'c': true })
 // 第三版
-var node3 = Node3(item4)
-node3.addClass({ 'a': true, 'b': true })
+// var node3 = Node3(item4)
+// node3.addClass({ 'a': true, 'b': true })
+// 第四版
+var node3 = Node3('#item4')
+node3.addClass('red')

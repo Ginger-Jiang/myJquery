@@ -43,3 +43,24 @@ window.Node2 = function (ele) {
     }
   }
 }
+
+// 第四版
+window.Node2 = function (nodeOrSelect) {
+  let ele = nodeOrSelect
+  if(typeof ele === 'string'){
+    ele = document.querySelector(nodeOrSelect)
+  }
+  return {
+    getSiblings () {
+      let allChild = ele.parentNode.children
+      let res = { length: 0 }
+      for (let i = 0; i < allChild.length; i++) {
+        if (allChild[i] !== ele) {
+          res[res.length] = allChild[i]
+          res.length++
+        }
+      }
+      return res
+    }
+  }
+}
